@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <Button
+            android:text="Marvel Super Heroes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/marvel_btn" android:layout_marginTop="68dp"
+            app:layout_constraintTop_toBottomOf="@+id/physics_btn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="112dp" android:layout_marginStart="112dp"/>
+    <Button
+            android:text="Physics"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/physics_btn" android:layout_marginTop="64dp"
+            app:layout_constraintTop_toBottomOf="@+id/math_btn" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="160dp" android:layout_marginStart="160dp"/>
+    <Button
+            android:text="Math"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/math_btn" android:layout_marginTop="112dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="160dp" android:layout_marginStart="160dp"/>
+</android.support.constraint.ConstraintLayout>
+
