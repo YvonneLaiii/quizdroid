@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent">
+
+    <TextView
+            android:text="textview_overview"
+            android:layout_width="232dp"
+            android:layout_height="0dp"
+            android:id="@+id/textview_description"
+            app:layout_constraintTop_toBottomOf="@+id/textview_overview" android:layout_marginBottom="37dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/btn_startQuiz"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="textview_description"
+            android:layout_width="232dp"
+            android:layout_height="0dp"
+            android:id="@+id/textview_overview"
+            android:layout_marginTop="64dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textview_description"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+            android:text="Begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_startQuiz"
+            app:layout_constraintStart_toStartOf="@+id/textview_description"
+            app:layout_constraintTop_toBottomOf="@+id/textview_description" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/question_number"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="204dp"
+            android:layout_height="0dp"
+            android:id="@+id/question_number"
+            app:layout_constraintStart_toStartOf="@+id/btn_startQuiz" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_startQuiz" android:layout_marginBottom="174dp"/>
+</android.support.constraint.ConstraintLayout>
