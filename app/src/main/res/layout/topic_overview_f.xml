@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
                                              android:layout_height="match_parent">
+    <TextView
+            android:text="textview_overview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textview_description"
+            app:layout_constraintTop_toBottomOf="@+id/textview_overview"
+            android:layout_marginBottom="33dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_startQuiz" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="62dp" android:layout_marginStart="62dp" android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp"/>
+    <TextView
+            android:text="textview_description"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/textview_overview"
+            android:layout_marginTop="16dp" android:layout_marginBottom="43dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toTopOf="@+id/textview_description"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="62dp" android:layout_marginStart="62dp" android:layout_marginEnd="62dp"
+            android:layout_marginRight="62dp"/>
+    <Button
+            android:text="Begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_startQuiz"
+            app:layout_constraintTop_toBottomOf="@+id/textview_description"
+            android:layout_marginBottom="47dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/question_number" app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/question_number"
+            app:layout_constraintTop_toBottomOf="@+id/btn_startQuiz"
+            android:layout_marginBottom="62dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="62dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="62dp"
+            android:layout_marginEnd="62dp" android:layout_marginRight="62dp"/>
 
 </android.support.constraint.ConstraintLayout>

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          xmlns:tools="http://schemas.android.com/tools"
           package="edu.us.ischool.hlai98.quizdroid">
 
     <application
@@ -19,8 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Overview"/>
         <activity
-                android:name=".Overview"
+                android:name=".Answer"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -30,7 +33,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".Answer"
+                android:name=".QuizActivity"
                 android:label="@string/app_name"
                 android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>

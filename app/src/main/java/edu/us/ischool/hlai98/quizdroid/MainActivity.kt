@@ -23,12 +23,10 @@ class MainActivity : AppCompatActivity() {
         val list = findViewById<ListView>(R.id.topicList)
         list.adapter = adapter
         list.setOnItemClickListener { _: AdapterView<*>?, _: View?, position: Int, _: Long ->
-            val topics = findViewById<ListView>(R.id.topicList).getItemAtPosition(position).toString()
-            val intent: Intent = Intent(this@MainActivity, Overview::class.java)
-            intent.putExtra(Overview.topics, "$topics")
-            intent.putExtra(Overview.description, "")
-            intent.putExtra(Overview.tid, (position + 1))
+            val intent: Intent = Intent(this@MainActivity, QuizActivity::class.java)
+            intent.putExtra(QuizActivity.TID,(position + 1))
             startActivity(intent)
         }
     }
 }
+
