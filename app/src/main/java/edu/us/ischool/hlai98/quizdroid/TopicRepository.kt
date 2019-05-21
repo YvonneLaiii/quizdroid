@@ -1,6 +1,6 @@
 package edu.us.ischool.hlai98.quizdroid
 
-class TopicRepository : myTopicR {
+class TopicRepo : TopicRepository {
     private var topic = HashMap<String, Topic>()
     override fun getTopic(name: String): Topic {
         return this.topic[name]!!
@@ -21,5 +21,28 @@ class TopicRepository : myTopicR {
         this.topic["Marvel Super Heroes"]?.add(Quiz("Who died in the movie?", mutableListOf("Iron Man", "NOOOOOO!","IDK","I refuse to answer."), 0))
         this.topic["Marvel Super Heroes"]?.add(Quiz("Who is my favorite hero?", mutableListOf("No one", "Thor","Spider man","Iron Man"), 1))
         this.topic["Marvel Super Heroes"]?.add(Quiz("Loki is the brother of whom?", mutableListOf("Thor","Spider Man","Tony Stark","Stan Lee"), 0))
+    }
+}
+interface TopicRepository {
+    fun getTopic(name: String): Topic
+    fun getTopics(): MutableList<Topic>
+}
+
+class Topic(val title: String,val shortDescription : String,val longDescription: String, val result: MutableList<Quiz> = mutableListOf()) {
+    fun add(a: Quiz) {
+        result.add(a)
+    }
+    fun getAll(): List<Quiz> {
+        return this.result.toList()
+    }
+}
+class Quiz {
+    val question: String
+    val answers: MutableList<String>
+    val correct: Int
+    constructor(question:String, answers: MutableList<String>, correct:Int) {
+        this.question = question
+        this.answers = answers
+        this.correct = correct
     }
 }
