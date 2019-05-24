@@ -4,10 +4,13 @@ import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.ConnectivityManager
 import android.os.Bundle
+import android.provider.Settings
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log
 import android.view.Menu
@@ -20,13 +23,29 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private val INTERNET_REQUEST_CODE = 1
+    private val JSON_URL = "http://tednewardsandbox.site44.com/questions.json"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getPermission()
 
+        val cm = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
+        if (cm.activeNetworkInfo == null) {
+            Toast.makeText(this, "Internet Connection Failed.", Toast.LENGTH_LONG)
+        }
+        if (Settings.Global.AIRPLANE_MODE_ON == "airplane_mode_on") {
+            val builder = AlertDialog.Builder(this)
+            builder.apply {
+                setTitle("Turn off Airplane Mode?")
+                setMessage("Would you like to go to Settings and turn off Airplane Mode?")
+                setPositiveButton("Yes") { dialog, which -> startActivityForResult(Intent(Settings.ACTION_SETTINGS), 0) }
+            }
+            builder.create().show()
+        }
+
         val preference = getPreferences(Context.MODE_PRIVATE)
         val saveBtn = findViewById<Button>(R.id.btn_save)
+        val stopBtn = findViewById<Button>(R.id.btn_stop)
         val url = findViewById<EditText>(R.id.editText_url)
         val mode = findViewById<EditText>(R.id.editText_mode)
         url.hint = preference.getString("url", "Please type in your url.")
@@ -37,8 +56,23 @@ class MainActivity : AppCompatActivity() {
             mode.hint = num.toString()
         }
         saveBtn.setOnClickListener {
-            preference.edit().putString("url", url.text.toString()).apply()
-            preference.edit().putInt("min", mode.text.toString().toInt()).apply()
+            if (url.text.isEmpty()) {
+                Toast.makeText(this@MainActivity, "Please Enter url", Toast.LENGTH_LONG)
+            } else if (mode.text.isEmpty()) {
+                Toast.makeText(this@MainActivity, "Please Enter a mode", Toast.LENGTH_LONG)
+            } else {
+                preference.edit().putString("url", url.text.toString()).apply()
+                preference.edit().putInt("min", mode.text.toString().toInt()).apply()
+                btn_save.isEnabled = false
+                btn_stop.isEnabled = true
+                val intent = Intent(this@MainActivity, urlService::class.java)
+                intent.putExtra("url",preference.getString("url", JSON_URL))
+                intent.putExtra("time",preference.getInt("min", 1))
+                startService(intent)
+            }
+        }
+        btn_stop.setOnClickListener{
+            stopService(Intent(this@MainActivity, urlService::class.java))
         }
 
 
