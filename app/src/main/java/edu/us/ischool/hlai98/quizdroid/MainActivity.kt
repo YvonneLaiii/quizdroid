@@ -1,6 +1,7 @@
 package edu.us.ischool.hlai98.quizdroid
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -12,10 +13,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.ListView
-import android.widget.Toast
+import android.widget.*
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -27,6 +25,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         getPermission()
 
+        val preference = getPreferences(Context.MODE_PRIVATE)
+        val saveBtn = findViewById<Button>(R.id.btn_save)
+        val url = findViewById<EditText>(R.id.editText_url)
+        val mode = findViewById<EditText>(R.id.editText_mode)
+        url.hint = preference.getString("url", "Please type in your url.")
+        val num = preference.getInt("min", 0)
+        if (num == 0) {
+            mode.hint = "Please type a number"
+        } else {
+            mode.hint = num.toString()
+        }
+        saveBtn.setOnClickListener {
+            preference.edit().putString("url", url.text.toString()).apply()
+            preference.edit().putInt("min", mode.text.toString().toInt()).apply()
+        }
 
 
         val singleton = QuizApp.getSingleton()
@@ -88,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         if (permission != PackageManager.PERMISSION_GRANTED) {
             request()
         } else {
-            Toast.makeText(this, "OK!", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Internet Permission ok!", Toast.LENGTH_LONG).show()
         }
     }
     private fun request() {
@@ -98,9 +111,9 @@ class MainActivity : AppCompatActivity() {
         when (requestCode) {
             INTERNET_REQUEST_CODE -> {
                 if (grantResults.isEmpty() || grantResults[0] != PackageManager.PERMISSION_GRANTED) {
-                    Log.i("main", "Permission has been denied by user")
+                    Log.i("main", "Permission denied")
                 } else {
-                    Log.i("main", "Permission has been granted by user")
+                    Log.i("main", "Permission granted")
                 }
             }
         }
