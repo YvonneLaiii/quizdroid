@@ -38,40 +38,45 @@ class MainActivity : AppCompatActivity() {
             builder.apply {
                 setTitle("Turn off Airplane Mode?")
                 setMessage("Would you like to go to Settings and turn off Airplane Mode?")
+                setNegativeButton("No") { dialog, which ->  Log.i("airplane", "No")}
                 setPositiveButton("Yes") { dialog, which -> startActivityForResult(Intent(Settings.ACTION_SETTINGS), 0) }
             }
             builder.create().show()
         }
+        val url = findViewById<EditText>(R.id.editText_url)
+        val mode = findViewById<EditText>(R.id.editText_mode)
 
         val preference = getPreferences(Context.MODE_PRIVATE)
         val saveBtn = findViewById<Button>(R.id.btn_save)
         val stopBtn = findViewById<Button>(R.id.btn_stop)
-        val url = findViewById<EditText>(R.id.editText_url)
-        val mode = findViewById<EditText>(R.id.editText_mode)
-        url.hint = preference.getString("url", "Please type in your url.")
-        val num = preference.getInt("min", 0)
-        if (num == 0) {
-            mode.hint = "Please type a number"
-        } else {
-            mode.hint = num.toString()
-        }
+
+
         saveBtn.setOnClickListener {
-            if (url.text.isEmpty()) {
-                Toast.makeText(this@MainActivity, "Please Enter url", Toast.LENGTH_LONG)
-            } else if (mode.text.isEmpty()) {
-                Toast.makeText(this@MainActivity, "Please Enter a mode", Toast.LENGTH_LONG)
-            } else {
-                preference.edit().putString("url", url.text.toString()).apply()
-                preference.edit().putInt("min", mode.text.toString().toInt()).apply()
+
+            var inputUrl = url.text.toString()
+            var inputMode = mode.text.toString()
+            if (inputUrl.isEmpty() || inputMode.isEmpty()) {
+                if (inputUrl.isEmpty() && inputMode.isEmpty()) {
+                    Toast.makeText(this@MainActivity, "Please Enter url and mode", Toast.LENGTH_LONG).show()
+                }else if (inputUrl.isEmpty()) {
+                    Toast.makeText(this@MainActivity, "Please Enter url", Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this@MainActivity, "Please Enter a mode(minute)", Toast.LENGTH_LONG).show()
+                }
+            }else {
+
+                preference.edit().putString("url", inputUrl).apply()
+                preference.edit().putInt("min", inputMode.toInt()).apply()
                 btn_save.isEnabled = false
                 btn_stop.isEnabled = true
                 val intent = Intent(this@MainActivity, urlService::class.java)
                 intent.putExtra("url",preference.getString("url", JSON_URL))
                 intent.putExtra("time",preference.getInt("min", 1))
+                Log.i("123123", "1")
                 startService(intent)
             }
         }
-        btn_stop.setOnClickListener{
+        stopBtn.setOnClickListener{
             stopService(Intent(this@MainActivity, urlService::class.java))
         }
 

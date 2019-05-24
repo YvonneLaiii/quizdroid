@@ -12,11 +12,14 @@ import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import java.lang.Exception
+import android.R.attr.path
+import java.io.FileOutputStream
+
 
 class urlService : IntentService("urlService") {
 
 
-    private var ok = true
+    private var continueDownload = true
     private var myHandler = Handler()
     override fun onHandleIntent(p0: Intent?) {
         var time: Int
@@ -24,11 +27,15 @@ class urlService : IntentService("urlService") {
         p0?.extras.apply {
             url = this!!.getString("url")
             time = this!!.getInt("time")
+            Log.i("123123", "2")
         }
-        while (ok) {
+        while (continueDownload) {
+            Log.i("123123", "3")
             myHandler.post{
-                Toast.makeText(this@urlService, "Downloading from $url every $time minutes.", Toast.LENGTH_LONG)
+                Log.i("123123", "4")
+                Toast.makeText(this@urlService, "Downloading from $url every $time minutes.", Toast.LENGTH_LONG).show()
                 download(url)
+
             }
             try {
                 Thread.sleep((time*60000).toLong())
@@ -38,30 +45,27 @@ class urlService : IntentService("urlService") {
         }
     }
     private fun download(url:String) {
+        Log.i("123123", "5")
         val queue = Volley.newRequestQueue(this)
         val jsonObjectRequest = StringRequest (
             Request.Method.GET, url,
-            Response.Listener<String> { response -> Toast.makeText(this,"Downloading", Toast.LENGTH_LONG).show()
-                try {
-                    val fos = this.openFileOutput("questions.json", Context.MODE_PRIVATE)
-                    if (response != null) {
-                        fos.write(response.toByteArray())
-                    }
-                    fos.flush()
-                    fos.close()
-                    Toast.makeText(this,"Saved to ${this.filesDir}/questions.json", Toast.LENGTH_LONG).show()
-                } catch (e: Exception) {
-                    e.stackTrace
-                }
+            Response.Listener<String> { response ->
+                Toast.makeText(this,"Downloading", Toast.LENGTH_LONG).show()
+                //Log.i("123123", "6")
+                val fos = FileOutputStream("/")
+                fos.write(response.toByteArray())
+                fos.close()
+
+                Toast.makeText(this,"Success! Saved to ${this.filesDir}/questions.json", Toast.LENGTH_LONG).show()
             },
-            Response.ErrorListener { error -> Toast.makeText(this, "ERROR:".format(error.toString()), Toast.LENGTH_LONG).show()
+            Response.ErrorListener { error -> Toast.makeText(this, "Download Failed".format(error.toString()), Toast.LENGTH_LONG).show()
             }
         )
         queue.add(jsonObjectRequest)
     }
     override fun onDestroy() {
         Toast.makeText(this@urlService, "Stop download", Toast.LENGTH_LONG).show()
-        ok = false
+        continueDownload = false
         super.onDestroy()
     }
 }
