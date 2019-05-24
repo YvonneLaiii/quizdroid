@@ -4,6 +4,8 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="edu.us.ischool.hlai98.quizdroid">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
             android:name=".QuizApp"
             android:allowBackup="true"
