@@ -1,27 +1,68 @@
 package edu.us.ischool.hlai98.quizdroid
 
-class TopicRepo : TopicRepository {
-    private var topic = HashMap<String, Topic>()
+import android.app.PendingIntent.getActivity
+import android.content.SharedPreferences
+import org.json.JSONObject
+import java.io.IOException
+import org.json.JSONArray
+import java.io.InputStream
+import android.app.Application
+import android.util.Log
+
+class TopicRepo(input: JSONArray) : TopicRepository {
+    var inputFile = input
+
+    var topic = json()
+
     override fun getTopic(name: String): Topic {
-        return this.topic[name]!!
+        return topic[name]!!
     }
     override fun getTopics(): MutableList<Topic> {
-        return this.topic.values.toMutableList()
+        return topic.values.toMutableList()
     }
-    init {
-        this.topic["Math"] = Topic("Math", "This is Math questions.","The following questions will be simple addition.")
-        this.topic["Math"]?.add(Quiz("1+1=", mutableListOf("1","2","3","4"), 1))
-        this.topic["Math"]?.add(Quiz("1+2=", mutableListOf("3","4","5","6"), 0))
-        this.topic["Math"]?.add(Quiz("1+3=", mutableListOf("3","4","5","6"), 1))
-        this.topic["Math"]?.add(Quiz("1+4=", mutableListOf("2","3","4","5"), 3))
-        this.topic["Physics"] = Topic("Physics", "This is Physics questions.","Test your physics knowledge.")
-        this.topic["Physics"]?.add(Quiz("what is Newton First Law", mutableListOf("IDK","No answer","You tell me","Law of Inertia"), 3))
-        this.topic["Physics"]?.add(Quiz("What is volocity?", mutableListOf("IDK","You tell me","speed","speed with direction"), 3))
-        this.topic["Marvel Super Heroes"] = Topic("Marvel Super Heroes", "This is Marvel's questions.","Questions about the Avenger : End Game (Spoiler Alert)")
-        this.topic["Marvel Super Heroes"]?.add(Quiz("Who died in the movie?", mutableListOf("Iron Man", "NOOOOOO!","IDK","I refuse to answer."), 0))
-        this.topic["Marvel Super Heroes"]?.add(Quiz("Who is my favorite hero?", mutableListOf("No one", "Thor","Spider man","Iron Man"), 1))
-        this.topic["Marvel Super Heroes"]?.add(Quiz("Loki is the brother of whom?", mutableListOf("Thor","Spider Man","Tony Stark","Stan Lee"), 0))
+
+    fun json() : HashMap<String,Topic> {
+        Log.i("quizapp", "4")
+        var topicJson = HashMap<String, Topic>()
+        for (i in 0 until inputFile.length()) {
+            val jsonObject = inputFile.get(i) as JSONObject
+            val title = jsonObject.get("title") as String
+
+            Log.i("topicR", title)
+
+            val desc = jsonObject.get("desc") as String
+            topicJson[title] = Topic(title, "This is $title", desc)
+            val questions = jsonObject.get("questions") as JSONArray
+            for (j in 0 until questions.length()) {
+                val quiz = questions.get(j) as JSONObject
+                val question = quiz.get("text") as String
+                var answer = quiz.get("answer")
+                answer = answer.toString().toInt()
+                val options = quiz.get("answers") as JSONArray
+                val one = options.get(0) as String
+                val two = options.get(1) as String
+                val three = options.get(2) as String
+                val four = options.get(3) as String
+                topicJson[title]?.add(Quiz(question, arrayOf(one,two,three,four), answer))
+            }
+        }
+        return topicJson
     }
+
+    //init {
+     //   this.topic["Math"] = Topic("Math", "This is Math questions.","The following questions will be simple addition.")
+     //   this.topic["Math"]?.add(Quiz("1+1=", mutableListOf("1","2","3","4"), 1))
+     //   this.topic["Math"]?.add(Quiz("1+2=", mutableListOf("3","4","5","6"), 0))
+     //   this.topic["Math"]?.add(Quiz("1+3=", mutableListOf("3","4","5","6"), 1))
+     //   this.topic["Math"]?.add(Quiz("1+4=", mutableListOf("2","3","4","5"), 3))
+     //   this.topic["Physics"] = Topic("Physics", "This is Physics questions.","Test your physics knowledge.")
+     //   this.topic["Physics"]?.add(Quiz("what is Newton First Law", mutableListOf("IDK","No answer","You tell me","Law of Inertia"), 3))
+     //   this.topic["Physics"]?.add(Quiz("What is volocity?", mutableListOf("IDK","You tell me","speed","speed with direction"), 3))
+     //   this.topic["Marvel Super Heroes"] = Topic("Marvel Super Heroes", "This is Marvel's questions.","Questions about the Avenger : End Game (Spoiler Alert)")
+     //   this.topic["Marvel Super Heroes"]?.add(Quiz("Who died in the movie?", mutableListOf("Iron Man", "NOOOOOO!","IDK","I refuse to answer."), 0))
+     //   this.topic["Marvel Super Heroes"]?.add(Quiz("Who is my favorite hero?", mutableListOf("No one", "Thor","Spider man","Iron Man"), 1))
+     //   this.topic["Marvel Super Heroes"]?.add(Quiz("Loki is the brother of whom?", mutableListOf("Thor","Spider Man","Tony Stark","Stan Lee"), 0))
+    //}
 }
 interface TopicRepository {
     fun getTopic(name: String): Topic
@@ -38,9 +79,9 @@ class Topic(val title: String,val shortDescription : String,val longDescription:
 }
 class Quiz {
     val question: String
-    val answers: MutableList<String>
+    val answers: Array<String>
     val correct: Int
-    constructor(question:String, answers: MutableList<String>, correct:Int) {
+    constructor(question:String, answers: Array<String>, correct:Int) {
         this.question = question
         this.answers = answers
         this.correct = correct

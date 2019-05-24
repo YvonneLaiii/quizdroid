@@ -18,14 +18,21 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Topic.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Topic.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/myTopicR.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,10 +57,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state relative-caret-position="226">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
-                <element signature="e#41#95#0" expanded="true" />
+                <element signature="e#41#266#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +69,60 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="180">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="423">
+              <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+              <folding>
+                <element signature="e#41#349#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-46">
+              <caret line="33" column="25" selection-start-line="33" selection-end-line="34" />
+              <folding>
+                <element signature="e#41#319#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,26 +130,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Overview.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="19" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="501">
+              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+              <folding>
+                <element signature="e#41#288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="77">
+              <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
             </state>
           </provider>
         </entry>
@@ -113,6 +167,8 @@
       <find>tid</find>
       <find>StartQ</find>
       <find>current</find>
+      <find>this.topic</find>
+      <find>text</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -124,34 +180,34 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/question_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerPage.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/answer_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/topic_overview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionPage.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicOverview.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/quiz.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizA.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/answer_f.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/question_f.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_overview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/topic_overview_f.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/myTopicR.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Topic.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="689" />
-    <option name="width" value="751" />
+    <option name="x" value="569" />
+    <option name="width" value="871" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -159,6 +215,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -179,15 +238,19 @@
             </path>
             <path>
               <item name="quizdroid" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="quizdroid" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,25 +356,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="569" y="0" width="871" height="900" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.22961374" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.28106153" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info id="Resources Explorer" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" weight="0.32891566" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.4985694" weight="0.24698795" />
+      <window_info id="Resources Explorer" order="8" weight="0.32988167" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4985207" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Logcat" order="1" sideWeight="0.49704143" visible="true" weight="0.23373494" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50214595" side_tool="true" weight="0.488045" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5029586" side_tool="true" weight="0.24698795" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.49928468" weight="0.0" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49785408" visible="true" weight="0.3554217" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49785408" weight="0.3554217" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -325,14 +388,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/answer_view.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerPage.kt" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/question_view.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicOverview.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/topic_overview.xml" />
@@ -340,25 +395,25 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerF.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/StartQuiz.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/quiz.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizA.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_question.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" selection-start-line="8" selection-end-line="62" selection-end-column="107" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_answer.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="698">
           <caret line="53" selection-start-line="7" selection-end-line="53" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Answer.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -380,31 +435,13 @@
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/content/res/Resources.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding>
-            <element signature="e#41#319#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/answer_f.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/question_f.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -414,68 +451,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/topic_overview_f.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_overview.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="555">
           <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="e#41#349#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="42" column="51" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/myTopicR.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/myTopicR.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Quiz.kt" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Topic.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Overview.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -483,34 +477,91 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="6" column="78" selection-start-line="6" selection-start-column="78" selection-end-line="6" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/questions.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizApp.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state relative-caret-position="226">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
           <folding>
-            <element signature="e#41#95#0" expanded="true" />
+            <element signature="e#41#266#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="e#41#288#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/OverviewFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="33" column="25" selection-start-line="33" selection-end-line="34" />
+          <folding>
+            <element signature="e#41#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/MainActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="180">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/TopicRepository.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuizActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="37" lean-forward="true" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+        <state relative-caret-position="273">
+          <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/Topic.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/answer_f.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/QuestionFragment.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="266">
+          <caret line="79" column="66" selection-start-line="79" selection-start-column="66" selection-end-line="79" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/edu/us/ischool/hlai98/quizdroid/AnswerFragment.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="63" column="33" lean-forward="true" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
+          <folding>
+            <element signature="e#41#349#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
